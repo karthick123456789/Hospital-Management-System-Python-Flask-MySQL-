@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Patients</title>
+</head>
+<body>
+<h2>View patient</h2>
+
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Disease</th>
+    <th>Action</th>
+  </tr>
+  {% for p in patients %}
+  <tr>
+    <td>{{ p[0] }}</td>
+    <td>{{ p[1] }}</td>
+    <td>{{ p[2] }}</td>
+    <td>{{ p[3] }}</td>
+    <td>
+      <a href="/delete-patient/{{ p[0] }}"
+         onclick="return confirm('Are you sure want to delete this patients?')">
+        Delete
+      </a>
+    </td>
+  </tr>
+
+  {% endfor %}
+</table>
+<br>
+<a href="/">Back to Home</a>
+</body>
+</html>

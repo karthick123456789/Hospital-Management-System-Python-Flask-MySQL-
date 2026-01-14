@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Doctor</title>
+
+</head>
+<body>
+<h1>
+  Edit Doctor
+</h1>
+<form method="post">
+  Name:
+  <input type="text" name="name" value="{{doctor[1]}}" required><br><br>
+  Specialization:
+  <input type="text" name="specialization" value="{{doctor[2]}}" required><br><br>
+  <button type="submit">Update Doctor</button>
+
+</form>
+<a href="/doctors">Back to Doctor</a>
+</body>
+</html>

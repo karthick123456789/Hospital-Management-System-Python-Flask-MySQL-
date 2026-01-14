@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Appointment</title>
+</head>
+<body>
+<h1>View Appointmnet</h1>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Patient</th>
+    <th>Doctor</th>
+    <th>Date</th>
+  </tr>
+  {% for a in appointments %}
+  <tr>
+    <td>{{ a[0] }}</td>
+    <td>{{ a[1] }}</td>
+    <td>{{ a[2] }}</td>
+    <td>{{ a[3] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+<br>
+<a href="/">Back to Home</a>
+
+</body>
+</html>
